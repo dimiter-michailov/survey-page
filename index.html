@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Window System Survey</title>
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            justify-items: center;
+            margin: 20px 0;
+        }
+        .image-grid img {
+            width: 400px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Automatic Window Opening System Concept</h1>
 
     <!-- Images Section -->
-    <div>
-        <img src="image1.jpg" alt="3D Model View 1" style="width:200px;height:auto;">
-        <img src="image2.jpg" alt="3D Model View 2" style="width:200px;height:auto;">
-        <img src="image3.jpg" alt="3D Model View 3" style="width:200px;height:auto;">
-        <img src="image4.jpg" alt="3D Model View 4" style="width:200px;height:auto;">
+    <div class="image-grid">
+        <img src="image1.jpg" alt="3D Model View 1">
+        <img src="image2.jpg" alt="3D Model View 2">
+        <img src="image3.jpg" alt="3D Model View 3">
+        <img src="image4.jpg" alt="3D Model View 4">
     </div>
 
     <!-- Description Section -->
     <p>This automatic window opening system is designed to improve air quality and temperature control in Tiny Houses. The concept monitors weather conditions to determine the best moments to open or close windows, ensuring comfort and efficiency.</p>
 
     <!-- Survey Form -->
-    <form action="/submit-survey" method="POST">
+    <form action="https://example.com/submit-survey" method="POST">
         <!-- Question 1 -->
         <label for="usefulness">1. How useful do you think this automatic window opening system will be for your Tiny House?</label><br>
         <input type="range" id="usefulness" name="usefulness" min="1" max="10"><br><br>
