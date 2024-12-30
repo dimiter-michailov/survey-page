@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Window System Survey</title>
+</head>
+<body>
+    <h1>Automatic Window Opening System Concept</h1>
+
+    <!-- Images Section -->
+    <div>
+        <img src="image1.jpg" alt="3D Model View 1" style="width:200px;height:auto;">
+        <img src="image2.jpg" alt="3D Model View 2" style="width:200px;height:auto;">
+        <img src="image3.jpg" alt="3D Model View 3" style="width:200px;height:auto;">
+        <img src="image4.jpg" alt="3D Model View 4" style="width:200px;height:auto;">
+    </div>
+
+    <!-- Description Section -->
+    <p>This automatic window opening system is designed to improve air quality and temperature control in Tiny Houses. The concept monitors weather conditions to determine the best moments to open or close windows, ensuring comfort and efficiency.</p>
+
+    <!-- Survey Form -->
+    <form action="/submit-survey" method="POST">
+        <!-- Question 1 -->
+        <label for="usefulness">1. How useful do you think this automatic window opening system will be for your Tiny House?</label><br>
+        <input type="range" id="usefulness" name="usefulness" min="1" max="10"><br><br>
+
+        <!-- Question 2 -->
+        <label for="effective">2. Do you think it will accomplish cooling, heating, and temperature control effectively?</label><br>
+        <input type="radio" id="effective-yes" name="effective" value="yes">
+        <label for="effective-yes">Yes</label>
+        <input type="radio" id="effective-no" name="effective" value="no">
+        <label for="effective-no">No</label><br><br>
+
+        <!-- Question 3 -->
+        <label for="appealing">3. Does the product look appealing to you?</label><br>
+        <input type="radio" id="appealing-yes" name="appealing" value="yes">
+        <label for="appealing-yes">Yes</label>
+        <input type="radio" id="appealing-no" name="appealing" value="no">
+        <label for="appealing-no">No</label><br><br>
+
+        <!-- Question 4 -->
+        <label for="preference">4. Would you choose it over similar products? Why or why not?</label><br>
+        <textarea id="preference" name="preference" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Question 5 -->
+        <label for="install">5. Do you believe this product will be easy to install?</label><br>
+        <input type="radio" id="install-yes" name="install" value="yes">
+        <label for="install-yes">Yes</label>
+        <input type="radio" id="install-no" name="install" value="no">
+        <label for="install-no">No</label><br><br>
+
+        <!-- Question 6 -->
+        <label for="aesthetic">6. Does it fit your Tiny House aesthetic?</label><br>
+        <input type="radio" id="aesthetic-yes" name="aesthetic" value="yes">
+        <label for="aesthetic-yes">Yes</label>
+        <input type="radio" id="aesthetic-no" name="aesthetic" value="no">
+        <label for="aesthetic-no">No</label><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
