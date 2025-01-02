@@ -16,6 +16,11 @@
             width: 400px;
             height: auto;
         }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +38,11 @@
     <p>This automatic window opening system is designed to improve air quality and temperature control in Tiny Houses. The concept monitors weather conditions to determine the best moments to open or close windows, ensuring comfort and efficiency.</p>
 
     <!-- Survey Form -->
-    <form action="https://script.google.com/macros/s/AKfycbxen-flAU6Ls_FKiM4Sk_ROzRJs5U7k1NT1Yj2r5bau3FsdCNYrqHw5_fn5PlJ8y48b/exec" method="POST">
+    <form 
+        action="https://script.google.com/macros/s/AKfycbxen-flAU6Ls_FKiM4Sk_ROzRJs5U7k1NT1Yj2r5bau3FsdCNYrqHw5_fn5PlJ8y48b/exec" 
+        method="POST" 
+        target="_self">
+        
         <!-- Question 1 -->
         <label for="usefulness">1. How useful do you think this automatic window opening system will be for your Tiny House?</label><br>
         <input type="range" id="usefulness" name="usefulness" min="1" max="10"><br><br>
