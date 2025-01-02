@@ -21,10 +21,14 @@
             line-height: 1.6;
             margin: 20px;
         }
+        span {
+            font-weight: bold;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Automatic Window Opening System Concept</h1>
+    <h1>Automatic Window Opening System</h1>
 
     <!-- Images Section -->
     <div class="image-grid">
@@ -35,7 +39,11 @@
     </div>
 
     <!-- Description Section -->
-    <p>This automatic window opening system is designed to improve air quality and temperature control in Tiny Houses. The concept monitors weather conditions to determine the best moments to open or close windows, ensuring comfort and efficiency.</p>
+    <p>This automatic window opening system is designed to improve air quality and temperature control in small living spaces (tiny houses, small apartments, student rooms, etc.).</p>
+
+    <p>The system uses weather data and in-house sensors to automatically decide when to open or close windows for you (no human input required).</p>
+    
+    <p>It enhances the air circulation and equalizes the temperature between the inside and outside.</p>
 
     <!-- Survey Form -->
     <form 
@@ -44,40 +52,56 @@
         target="_self">
         
         <!-- Question 1 -->
-        <label for="usefulness">1. How useful do you think this automatic window opening system will be for your Tiny House?</label><br>
-        <input type="range" id="usefulness" name="usefulness" min="1" max="10"><br><br>
+        <label for="air_circulation_issue">1. Is poor air circulation an issue at your home?</label><br>
+        <input type="radio" id="air_circulation-yes" name="air_circulation_issue" value="Yes">
+        <label for="air_circulation-yes">Yes</label>
+        <input type="radio" id="air_circulation-no" name="air_circulation_issue" value="No">
+        <label for="air_circulation-no">No</label><br><br>
 
         <!-- Question 2 -->
-        <label for="effective">2. Do you think it will accomplish cooling, heating, and temperature control effectively?</label><br>
+        <label for="usefulness">2. How likely are you to consider buying a device that manages air circulation for you (such as this)? (1 = Not likely at all, 10 = Very likely)</label><br>
+        <input type="range" id="usefulness" name="usefulness" min="1" max="10" oninput="document.getElementById('usefulness_value').innerText = this.value">
+        <span id="usefulness_value">5</span><br><br>
+
+        <!-- Question 3 -->
+        <label for="effective">3. Do you think this product provides an effective solution for managing and improving air circulation?</label><br>
         <input type="radio" id="effective-yes" name="effective" value="Yes">
         <label for="effective-yes">Yes</label>
         <input type="radio" id="effective-no" name="effective" value="No">
         <label for="effective-no">No</label><br><br>
 
-        <!-- Question 3 -->
-        <label for="appealing">3. Does the product look appealing to you?</label><br>
-        <input type="radio" id="appealing-yes" name="appealing" value="Yes">
-        <label for="appealing-yes">Yes</label>
-        <input type="radio" id="appealing-no" name="appealing" value="No">
-        <label for="appealing-no">No</label><br><br>
-
         <!-- Question 4 -->
-        <label for="preference">4. Would you choose it over similar products? Why or why not?</label><br>
-        <textarea id="preference" name="preference" rows="4" cols="50"></textarea><br><br>
+        <label for="automation_opinion">4. How much do you support home automation? (0 = Strongly against, 10 = Strongly for)</label><br>
+        <input type="range" id="automation_opinion" name="automation_opinion" min="0" max="10" oninput="document.getElementById('automation_value').innerText = this.value">
+        <span id="automation_value">5</span><br><br>
 
         <!-- Question 5 -->
-        <label for="install">5. Do you believe this product will be easy to install?</label><br>
+        <label for="preference">5. Would you favor this product over other methods that improve air circulation in your home? Are there any issues you see?</label><br>
+        <textarea id="preference" name="preference" rows="4" cols="50" placeholder="Type your answer here..."></textarea><br><br>
+
+        <!-- Question 6 -->
+        <label for="install">6. Do you believe this product will be easy to install?</label><br>
         <input type="radio" id="install-yes" name="install" value="Yes">
         <label for="install-yes">Yes</label>
         <input type="radio" id="install-no" name="install" value="No">
         <label for="install-no">No</label><br><br>
 
-        <!-- Question 6 -->
-        <label for="aesthetic">6. Does it fit your Tiny House aesthetic?</label><br>
+        <!-- Question 7 -->
+        <label for="aesthetic">7. Does it fit in the aesthetic of your home?</label><br>
         <input type="radio" id="aesthetic-yes" name="aesthetic" value="Yes">
         <label for="aesthetic-yes">Yes</label>
         <input type="radio" id="aesthetic-no" name="aesthetic" value="No">
         <label for="aesthetic-no">No</label><br><br>
+
+        <!-- Question 8 -->
+        <label for="price_range">8. What is the price range at which you would consider spending for this product?</label><br>
+        <select id="price_range" name="price_range">
+            <option value="50-100">50-100</option>
+            <option value="100-200">100-200</option>
+            <option value="200-500">200-500</option>
+            <option value="500-1000">500-1000</option>
+            <option value="over_1000">Over 1000</option>
+        </select><br><br>
 
         <!-- Submit Button -->
         <button type="submit">Submit</button>
